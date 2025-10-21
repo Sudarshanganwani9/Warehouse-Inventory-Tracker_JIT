@@ -1,4 +1,4 @@
-# 🏭 Warehouse Inventory Tracker (JIT System)
+# 🏭 Warehouse Inventory Tracker
 
 This project is a **Warehouse Inventory Tracker** based on the **Just-In-Time (JIT)** inventory management concept.  
 It helps manage stock levels, track products, and trigger alerts when inventory falls below the required threshold.
@@ -45,7 +45,7 @@ java -cp out Main
 
 ---
 
-### 📘 Example Output
+## 📘 Example Output
 
 === Warehouse Inventory Tracker ===
 Added product: Laptop (Stock: 10)
@@ -57,7 +57,7 @@ Updated stock: 10
 
 ---
 
-### 🧩 Concepts Demonstrated
+## 🧩 Concepts Demonstrated
 
 Object-Oriented Programming (OOP)
 
@@ -71,7 +71,7 @@ Alert services and modular Java design
 
 ---
 
-### 👨‍💻 Author
+## 👨‍💻 Author
 
 Sudarshan Ganwani
 📅 Project for demonstration and learning
