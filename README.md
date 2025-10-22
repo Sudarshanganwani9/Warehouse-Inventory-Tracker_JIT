@@ -1,6 +1,6 @@
 # 🏭 Warehouse Inventory Tracker
 
-This project is a **Warehouse Inventory Tracker** based on the **Just-In-Time (JIT)** inventory management concept.  
+This project is a **Warehouse Inventory Tracker** based on the warehouse inventory management concept.  
 It helps manage stock levels, track products, and trigger alerts when inventory falls below the required threshold.
 
 ---
@@ -34,11 +34,11 @@ Warehouse-Inventory-Tracker_JIT-main/Warehouse-Inventory-Tracker_JIT-main/
 
 2. Compile the project:
 ```bash
-javac -d out src/*.java
+javac *.java
 
 3. Run the program:
 
-java -cp out Main
+java Main
 
 
 
@@ -47,12 +47,15 @@ java -cp out Main
 
 ## 📘 Example Output
 
-=== Warehouse Inventory Tracker ===
-Added product: Laptop (Stock: 10)
-Added product: Keyboard (Stock: 5)
-Low stock alert! Keyboard has only 2 items left.
-Restocking Keyboard...
-Updated stock: 10
+? WAREHOUSE INVENTORY SYSTEM
+===============================
+?  Add Product
+?  Delete Product
+?  Receive Shipment (+Stock)
+?  Fulfill Order (-Stock)
+?  View All Products
+?  Exit
+? Enter your choice: 1
 
 
 ---
