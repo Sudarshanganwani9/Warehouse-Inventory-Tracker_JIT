@@ -2,52 +2,41 @@ public class Product {
     private String id;
     private String name;
     private int quantity;
-    private int reorderThreshold;
+    private double price;
 
-    public Product(String id, String name, int quantity, int reorderThreshold) {
+    public Product(String id, String name, int quantity, double price) {
         this.id = id;
         this.name = name;
         this.quantity = quantity;
-        this.reorderThreshold = reorderThreshold;
+        this.price = price;
     }
 
-    public String getId() {
-        return id;
+    public String getId() { return id; }
+    public String getName() { return name; }
+    public int getQuantity() { return quantity; }
+    public double getPrice() { return price; }
+
+    public void setQuantity(int quantity) { this.quantity = quantity; }
+    public void setPrice(double price) { this.price = price; }
+
+    public void restock(int amount) {
+        this.quantity += amount;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public int getReorderThreshold() {
-        return reorderThreshold;
-    }
-
-    public void increaseStock(int amount) {
-        if (amount > 0) {
-            quantity += amount;
-        }
-    }
-
-    public void decreaseStock(int amount) {
-        if (amount > 0 && amount <= quantity) {
+    public boolean reduceStock(int amount) {
+        if (quantity >= amount) {
             quantity -= amount;
-        } else {
-            System.out.println("❌ Error: Insufficient stock for " + name);
+            return true;
         }
+        return false;
     }
 
     public boolean needsRestock() {
-        return quantity <= reorderThreshold;
+        return quantity < 5;
     }
 
     @Override
     public String toString() {
-        return String.format("Product[ID=%s, Name=%s, Qty=%d, Threshold=%d]",
-                id, name, quantity, reorderThreshold);
+        return String.format("ID: %s | Name: %s | Qty: %d | Price: ₹%.2f", id, name, quantity, price);
     }
 }
